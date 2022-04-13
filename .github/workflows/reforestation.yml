@@ -13,6 +13,8 @@ jobs:
   auto_commit:
     runs-on: ubuntu-latest
     steps:
+      - name: Set global directory
+        run: git config --global --add safe.directory /github/workspace
       - uses: actions/checkout@v2      
         with:
          persist-credentials: false
@@ -28,7 +30,6 @@ jobs:
         run: |
           git config --local user.email "saugi.dev@gmail.com"
           git config --local user.name "zuramai"
-          git config --global --add safe.directory /github/workspace
           git add -A
           git commit -m "What are you looking for?"
           
