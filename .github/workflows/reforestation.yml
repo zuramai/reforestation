@@ -26,8 +26,8 @@ jobs:
           
       - name: Commit changes
         run: |
-          git config --local user.email "ahmadsaugigis@yahoo.com"
-          git config --local user.name "zuramai"
+          git config --local user.email "bussinesyafiq@gmail.com"
+          git config --local user.name "Syafiq1331"
           git add -A
           git commit -m "What are you looking for?"
           
@@ -37,3 +37,4 @@ jobs:
           force: true
           directory: "."
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
